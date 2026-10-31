@@ -1,0 +1,19 @@
+# Generated raw simulation data and local R files
+simulations/
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+.Rlib/
+provenance/*.log
+provenance/*summary.csv
+provenance/display_manifest.json
+.DS_Store
+*.tmp
+*.temp
+# Keep only manuscript display artifacts in the versioned output directories.
+figures/*
+!figures/fig*.pdf
+!figures/fig*.png
+tables/*
+!tables/tab*.tex
