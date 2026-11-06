@@ -210,9 +210,11 @@ AddPlotLabels <- function(data) {
 #' Build a faceted boxplot for one pseudo-value type.
 #'
 #' @param data Plotting data for one type.
+#' @param base_size Base font size in points.
+#' @param n_breaks Approximate number of vertical-axis tick marks.
 #' @return ggplot object.
-BuildBiasPlot <- function(data) {
-  gg_theme <- theme_bw() +
+BuildBiasPlot <- function(data, base_size = 11, n_breaks = 5) {
+  gg_theme <- theme_bw(base_size = base_size) +
     theme(
       legend.position = "top",
       panel.grid.major = element_blank(),
@@ -252,7 +254,7 @@ BuildBiasPlot <- function(data) {
       linewidth = 0.2
     ) +
     scale_x_discrete(name = "Rate Parameter") +
-    scale_y_continuous(name = "Bias")
+    scale_y_continuous(name = "Bias", n.breaks = n_breaks)
 
   return(out)
 }

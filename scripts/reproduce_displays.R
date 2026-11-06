@@ -38,7 +38,7 @@ table_args <- c("--dir", data_path("estimation"), "--ground_truth", opts$event_t
 if (!is.null(opts$manuscript_dir)) table_args <- c(table_args, "--manuscript_out", file.path(opts$manuscript_dir, "tables/tabS1.tex"))
 run("tables/make_table_S1.R", table_args)
 
-mapping <- c("fig1a.pdf" = "fig2a.pdf", "fig1b.pdf" = "fig2b.pdf", "fig2a.pdf" = "fig3a.pdf", "fig2b.pdf" = "fig3b.pdf", "fig3.png" = "fig5.png", "fig4.pdf" = "fig6.pdf", "figS2a.pdf" = "fig4a.pdf", "figS2b.pdf" = "fig4b.pdf", "figS3.pdf" = "supp_fig_terminal_event_beta.pdf", "figS4.pdf" = "supp_fig_terminal_event_gamma.pdf")
+mapping <- c("fig1a.pdf" = "fig2a.pdf", "fig1b.pdf" = "fig2b.pdf", "fig2a.pdf" = "fig3a.pdf", "fig2b.pdf" = "fig3b.pdf", "fig3.png" = "fig5.png", "fig3.pdf" = "fig5.pdf", "fig4.pdf" = "fig6.pdf", "figS2a.pdf" = "fig4a.pdf", "figS2b.pdf" = "fig4b.pdf", "figS3.pdf" = "supp_fig_terminal_event_beta.pdf", "figS4.pdf" = "supp_fig_terminal_event_gamma.pdf")
 if (!is.null(opts$manuscript_dir)) {
   for (file in names(mapping)) {
     target <- file.path(opts$manuscript_dir, "figures", mapping[[file]])

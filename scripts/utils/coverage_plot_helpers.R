@@ -232,9 +232,11 @@ AddPlotLabels <- function(data) {
 #' Build a faceted bar plot for one pseudo-value type.
 #'
 #' @param data Plotting data for one type.
+#' @param base_size Base font size in points.
+#' @param n_breaks Approximate number of vertical-axis tick marks.
 #' @return ggplot object.
-BuildCoveragePlot <- function(data) {
-  gg_theme <- theme_bw() +
+BuildCoveragePlot <- function(data, base_size = 11, n_breaks = 5) {
+  gg_theme <- theme_bw(base_size = base_size) +
     theme(
       legend.position = "top",
       panel.grid.major = element_blank(),
@@ -288,7 +290,8 @@ BuildCoveragePlot <- function(data) {
     scale_x_discrete(name = "Rate Parameter") +
     scale_y_continuous(
       name = "Coverage",
-      limits = c(0, 1)
+      limits = c(0, 1),
+      n.breaks = n_breaks
     )
 
   return(out)

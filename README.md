@@ -1,7 +1,7 @@
 # MCC regression replication
 
 Zachary R. McCaw <br>
-Updated: 2026-10-30
+Updated: 2026-11-06
 
 Code and display artifacts for *Pseudo-value-Based Mean Cumulative Count Regression*. Figure and table numbers match the current manuscript and supplement. Figure 5 (ORATORIO) is supplied by the clinical collaborators; participant data and clinical analysis code are not distributed here.
 
@@ -30,7 +30,7 @@ Scripts locate this checkout from their own path and accept absolute input/outpu
 |---|---|---|---|
 | Figure 1: bias | `sim_estimation.R`, `sim_estimation_truth.R` | `plot_figure_1.R` | `fig1a.pdf`, `fig1b.pdf` |
 | Figure 2: coverage | same corrected run and truth as Figure 1 | `plot_figure_2.R` | `fig2a.pdf`, `fig2b.pdf` |
-| Figure 3: null QQ | `sim_type1.R` | `plot_figure_3.R` | `fig3.png` (also PDF on regeneration) |
+| Figure 3: null QQ | `sim_type1.R` | `plot_figure_3.R` | `fig3.pdf`, `fig3.png` |
 | Figure 4: power | `sim_power.R` | `plot_figure_4.R` | `fig4.pdf` |
 | Web Figure 1: pseudo-value concordance | `sim_pseudovalue.R` | `plot_figure_S1.R` | `figS1a.png`, `figS1b.png` |
 | Web Figure 2: frailty bias and coverage | `sim_frailty.R`, `sim_frailty_truth.R` | `plot_figure_S2.R` | `figS2a.pdf`, `figS2b.pdf` |
@@ -40,6 +40,8 @@ Scripts locate this checkout from their own path and accept absolute input/outpu
 | Web Table 1 / Table S1: SE calibration | same corrected run and truth as Figures 1–2 | `make_table_S1.R` | `tabS1.tex` |
 
 Web Table 1 reports the empirical Monte Carlo SD of the AUMCF treatment estimates, RMS corrected SE, and corrected 95% coverage in 27 cells with 2,000 replicates each. It uses the same estimates, SEs, and normal intervals as Figure 2. Empirical SD is a simulation benchmark. Web Figure 1 compares pseudo-values and contains no variance estimates or inference.
+
+Figures 1 and 2 use 18-point base text on 10 × 4.1-inch panels. In the manuscript, stack panels (a) and (b) vertically in `\textwidth` subfigures, with `\par\smallskip` between them, and include each PDF at the full subfigure width. Figure 3 uses 18-point base text on an 8 × 7.2-inch canvas; include its vector PDF at `\textwidth`. The manuscript asset map uses `fig2a.pdf`/`fig2b.pdf` for Figure 1, `fig3a.pdf`/`fig3b.pdf` for Figure 2, and `fig5.pdf` for Figure 3.
 
 ## Running the analyses
 
@@ -77,7 +79,7 @@ For existing saved production data, supply `--data_root`, `--event_truth`, `--te
 
 ## Reproducibility
 
-Raw production results and frozen truth are not bundled. The supplied displays were generated from validated saved results; their generation record is `provenance/current_displays.json`. New Monte Carlo results need not be byte-identical, and PDF timestamps can differ even when the numerical summaries agree. Keep each truth-generation run separate and use an explicit truth file or directory; do not pool unrelated runs.
+Raw production results and frozen truth are not bundled. The supplied displays were generated from validated saved results; their original generation record is `provenance/current_displays.json`. The readability refresh of Figures 1–3 is recorded in `provenance/figure_readability_20261106.json`; it reuses the same validated inputs and changes only plotting typography, dimensions, and manuscript layout. New Monte Carlo results need not be byte-identical, and PDF timestamps can differ even when the numerical summaries agree. Keep each truth-generation run separate and use an explicit truth file or directory; do not pool unrelated runs.
 
 Web Figure 1 retains a fixed grid traversal, including unused tau=1 and n=400 cells, to reproduce the plotted cells' random sequence at seed 3141. This display concerns pseudo-value agreement rather than regression inference.
 

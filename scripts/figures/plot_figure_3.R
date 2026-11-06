@@ -232,7 +232,7 @@ BuildQQPlot <- function(
     qq_df,
     bands_df
 ) {
-  gg_theme <- theme_bw() +
+  gg_theme <- theme_bw(base_size = 18) +
     theme(
       legend.position = "top",
       panel.grid.major = element_blank(),
@@ -313,14 +313,14 @@ opt_list <- list(
   make_option(
     c("--width"),
     type = "double",
-    help = "Plot width in inches (default: 10)",
-    default = 10
+    help = "Plot width in inches (default: 8)",
+    default = 8
   ),
   make_option(
     c("--height"),
     type = "double",
-    help = "Plot height in inches (default: 10)",
-    default = 10
+    help = "Plot height in inches (default: 7.2)",
+    default = 7.2
   )
 )
 
