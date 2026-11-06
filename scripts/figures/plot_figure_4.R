@@ -139,9 +139,10 @@ LoadPowerData <- function(dir_in) {
 #' @param metric "power" or "ncp_proxy".
 #' @return ggplot object.
 BuildPowerPlot <- function(data, metric) {
-  gg_theme <- theme_bw() +
+  gg_theme <- theme_bw(base_size = MainFigureBaseSize(9)) +
     theme(
       legend.position = "top",
+      panel.spacing.x = grid::unit(1, "lines"),
       panel.grid.major = element_blank(),
       panel.grid.minor = element_blank(),
       panel.border = element_blank(),

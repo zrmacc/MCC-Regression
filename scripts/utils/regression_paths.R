@@ -157,3 +157,11 @@ SaveRegressionFigure <- function(
   }
   return(invisible(path_pdf))
 }
+
+#' Base font size for main-text plots included at the same manuscript width.
+#'
+#' @param width Source canvas width in inches.
+#' @return Font size in points (11.7 points at a 6.5-inch manuscript width).
+MainFigureBaseSize <- function(width) {
+  18 * width / 10
+}

@@ -206,8 +206,9 @@ AddPlotLabels <- function(data) {
 #' @param data Plotting data for one type.
 #' @param base_size Base font size in points.
 #' @param n_breaks Approximate number of vertical-axis tick marks.
+#' @param symmetric Use equal vertical-axis limits above and below zero.
 #' @return ggplot object.
-BuildBiasPlot <- function(data, base_size = 11, n_breaks = 5) {
+BuildBiasPlot <- function(data, base_size = 11, n_breaks = 5, symmetric = FALSE) {
   gg_theme <- theme_bw(base_size = base_size) +
     theme(
       legend.position = "top",
@@ -249,6 +250,12 @@ BuildBiasPlot <- function(data, base_size = 11, n_breaks = 5) {
     ) +
     scale_x_discrete(name = "Rate Parameter") +
     scale_y_continuous(name = "Bias", n.breaks = n_breaks)
+
+  if (symmetric) {
+    bound <- max(abs(data$bias), na.rm = TRUE)
+    if (bound == 0) bound <- 1
+    out <- out + coord_cartesian(ylim = c(-bound, bound))
+  }
 
   return(out)
 }

@@ -1,9 +1,8 @@
 {
-  "generated_utc": "2026-11-06T19:27:45.434253+00:00",
-  "purpose": "Readability refresh of Figures 1\u20133 with taller panels and beta notation for either estimand; no simulation or numerical-analysis changes.",
+  "generated_utc": "2026-11-06T19:36:06.647489+00:00",
+  "purpose": "Symmetric Figure 1 bias axes and consistent printed typography across Figures 1\u20134; no simulation or numerical-analysis changes.",
   "original_generation_manifest": "current_displays.json",
-  "input_files_verified_against_original_md5": 211,
-  "base_font_pt": 18,
+  "input_files_verified_against_original_md5": 379,
   "figure_1_2_panel_inches": [
     10,
     5.2
@@ -13,49 +12,53 @@
     8
   ],
   "manuscript_layout": "Figures 1\u20132: full-width vertically stacked subfigures; Figure 3: full-width vector PDF. Single-spaced captions, subcaptions, and alt text within Figures 1\u20133.",
-  "validation": "All three plotting scripts completed successfully using their existing inference and design validators.",
+  "validation": "All four plotting scripts completed with existing inference/design validators. Symmetric MCF/AUMCF panel ranges verified; ggplot layer data identical before and after symmetrization. Font-to-source-width ratios match across Figures 1\u20134.",
   "outputs": [
     {
       "path": "figures/fig1a.pdf",
-      "sha256": "87ffab744e462824b8822f07f3c59464df1f100d4bebc5fe1485424320a794f8"
+      "sha256": "8267aa9b57e919a6859a27b86e5bac8de86e67723fbefb6b79130f44b40ea632"
     },
     {
       "path": "figures/fig1b.pdf",
-      "sha256": "1907bba69eb3ab34b28b657c57a01224b2a2cbcb0b9b7b5ec9aa735a1350e50e"
+      "sha256": "7d474a70866da047d884219181be1b06ec9f274ceb8262edeabf9c1d653e9e82"
     },
     {
       "path": "figures/fig2a.pdf",
-      "sha256": "d5a8740b771215d7698ef017950deb2b6e2df86ed4a5a2505d2bb3d581d29e57"
+      "sha256": "1bfd47bb9619e8880b30eebd94e9c7ccebbd2a324f70ebe86113d616432532de"
     },
     {
       "path": "figures/fig2b.pdf",
-      "sha256": "d831d7352b5366a9165bc6eb63a7ddb4393f86a84bd9b9789852c695e804c885"
+      "sha256": "9290bac4349a4a1fe6822d427fab12d1a1ba05a1b72132620a00e8ac41124067"
     },
     {
       "path": "figures/fig3.pdf",
-      "sha256": "e6d3cff926061a0d46f8ee1b028d97cbb77d9513bd3d73e1bc115d6f6659d263"
+      "sha256": "880a3ed624906084f169c715cb8b3002a7af5c46f2c05c9563101b91b3fa6651"
     },
     {
       "path": "figures/fig3.png",
-      "sha256": "838ac2c5d7f9f5717df6b4e0bbaea50e54787e88c5c291f018d5eaed8d4f7a02"
+      "sha256": "4b1fb56965743a5139526823f3c0f2ae27aba8ae35d3aa4f1d50c505e1fe31d7"
+    },
+    {
+      "path": "figures/fig4.pdf",
+      "sha256": "620b5fff6e9852892b57fc44023976053c89340b8586dc4543679770c4e90b08"
     }
   ],
   "source_files": [
     {
       "path": "scripts/figures/plot_figure_1.R",
-      "sha256": "8b2f9f7fbbcca8dbe17d58f8b63dc5979a2ba45e3927fead56d188945eca7000"
+      "sha256": "3c8ef8ec14b01f8ee6ec1612bb3861e1d9e7a342aa0701fd5452650a5b070147"
     },
     {
       "path": "scripts/figures/plot_figure_2.R",
-      "sha256": "75203aa498c3ea3eb95578b1c4c0df70f143f106e3aa5703a6113b419fe2a715"
+      "sha256": "ff09ee3799541f0dd2f2806452737671ef21c7025221db085d2c431cad02a4bc"
     },
     {
       "path": "scripts/figures/plot_figure_3.R",
-      "sha256": "9bb19fe8074ff930f0d88835b5492eb933f9bedbde1003dfc3b60ab6fb9e5eb1"
+      "sha256": "d3c6ccdc20a8bd10738553e0bd347cbc5cb0413d10f9db255336cb05dbe17d53"
     },
     {
       "path": "scripts/utils/bias_plot_helpers.R",
-      "sha256": "a2bd40e992cf87078530cba72e764daa11efbfcee58428b01246d6ff2949f1a2"
+      "sha256": "b4c187942cd62a3ab5f7e8d1308b737708d76e0e0b3f4bbbfefbd17ca5b11b88"
     },
     {
       "path": "scripts/utils/coverage_plot_helpers.R",
@@ -64,8 +67,27 @@
     {
       "path": "scripts/reproduce_displays.R",
       "sha256": "451d53c03d8aadfc82330f04e476e72b43db6cf1ea232f8a420e95ec1db3ea0b"
+    },
+    {
+      "path": "scripts/figures/plot_figure_4.R",
+      "sha256": "9360b4d86499a63e106cdc49179306ee9efcf6f277ab64c4f9a6b068554e6625"
+    },
+    {
+      "path": "scripts/utils/regression_paths.R",
+      "sha256": "ee1cb2a0c0a9a4129cb3f88e8dc644ffdf40926387df10b450448a179998a81a"
     }
   ],
   "figure_1_2_y_axis_breaks": 3,
-  "coefficient_notation": "beta for both MCF and AUMCF, identified by panel headings"
+  "coefficient_notation": "beta for both MCF and AUMCF, identified by panel headings",
+  "base_font_pt_by_figure": {
+    "1": 18,
+    "2": 18,
+    "3": 14.4,
+    "4": 16.2
+  },
+  "printed_base_font_pt_at_6p5_inches": 11.7,
+  "figure_4_inches": [
+    9,
+    5
+  ]
 }

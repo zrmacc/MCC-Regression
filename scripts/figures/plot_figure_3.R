@@ -230,9 +230,10 @@ PreparePlotData <- function(
 #' @return ggplot object.
 BuildQQPlot <- function(
     qq_df,
-    bands_df
+    bands_df,
+    base_size = MainFigureBaseSize(8)
 ) {
-  gg_theme <- theme_bw(base_size = 18) +
+  gg_theme <- theme_bw(base_size = base_size) +
     theme(
       legend.position = "top",
       panel.grid.major = element_blank(),
@@ -384,7 +385,8 @@ print(counts_df)
 
 qq_plot <- BuildQQPlot(
   qq_df = plot_data$qq_df,
-  bands_df = plot_data$bands_df
+  bands_df = plot_data$bands_df,
+  base_size = MainFigureBaseSize(width)
 )
 
 SaveRegressionFigure(

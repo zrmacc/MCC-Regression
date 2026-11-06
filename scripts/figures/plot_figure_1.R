@@ -25,6 +25,6 @@ for (typ in c("MCF", "AUC")) {
   if (!any(plots$type == typ)) stop("Missing pseudo-value type: ", typ)
   panel <- if (typ == "MCF") "a" else "b"
   # Full-width panels stack vertically in the manuscript.
-  p <- BuildBiasPlot(plots[plots$type == typ, , drop = FALSE], base_size = 18, n_breaks = 3)
+  p <- BuildBiasPlot(plots[plots$type == typ, , drop = FALSE], base_size = MainFigureBaseSize(10), n_breaks = 3, symmetric = TRUE)
   SaveRegressionFigure(p, file.path(opts$out_dir, paste0("fig1", panel, ".pdf")), 10, 5.2)
 }
