@@ -25,5 +25,5 @@ for (typ in c("MCF", "AUC")) {
   panel <- if (typ == "MCF") "a" else "b"
   # Full-width panels stack vertically in the manuscript.
   p <- BuildCoveragePlot(plots[plots$type == typ, , drop = FALSE], base_size = 18, n_breaks = 3)
-  SaveRegressionFigure(p, file.path(opts$out_dir, paste0("fig2", panel, ".pdf")), 10, 4.1)
+  SaveRegressionFigure(p, file.path(opts$out_dir, paste0("fig2", panel, ".pdf")), 10, 5.2)
 }

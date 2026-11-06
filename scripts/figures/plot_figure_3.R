@@ -319,8 +319,8 @@ opt_list <- list(
   make_option(
     c("--height"),
     type = "double",
-    help = "Plot height in inches (default: 7.2)",
-    default = 7.2
+    help = "Plot height in inches (default: 8)",
+    default = 8
   )
 )
 

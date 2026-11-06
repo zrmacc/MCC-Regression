@@ -41,7 +41,7 @@ Scripts locate this checkout from their own path and accept absolute input/outpu
 
 Web Table 1 reports the empirical Monte Carlo SD of the AUMCF treatment estimates, RMS corrected SE, and corrected 95% coverage in 27 cells with 2,000 replicates each. It uses the same estimates, SEs, and normal intervals as Figure 2. Empirical SD is a simulation benchmark. Web Figure 1 compares pseudo-values and contains no variance estimates or inference.
 
-Figures 1 and 2 use 18-point base text on 10 × 4.1-inch panels. In the manuscript, stack panels (a) and (b) vertically in `\textwidth` subfigures, with `\par\smallskip` between them, and include each PDF at the full subfigure width. Figure 3 uses 18-point base text on an 8 × 7.2-inch canvas; include its vector PDF at `\textwidth`. The manuscript asset map uses `fig2a.pdf`/`fig2b.pdf` for Figure 1, `fig3a.pdf`/`fig3b.pdf` for Figure 2, and `fig5.pdf` for Figure 3.
+Figures 1 and 2 use 18-point base text on 10 × 5.2-inch panels. In the manuscript, stack panels (a) and (b) vertically in `\textwidth` subfigures, with `\par\smallskip` between them, and include each PDF at the full subfigure width. Figure 3 uses 18-point base text on an 8 × 8-inch canvas; include its vector PDF at `\textwidth`. Use single-spaced captions, subcaptions, and alt text within these figures so the taller panels fit on one page. Both MCF and AUMCF coefficient labels use β, with the panel headings identifying the estimand. The manuscript asset map uses `fig2a.pdf`/`fig2b.pdf` for Figure 1, `fig3a.pdf`/`fig3b.pdf` for Figure 2, and `fig5.pdf` for Figure 3.
 
 ## Running the analyses
 

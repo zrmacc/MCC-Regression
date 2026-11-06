@@ -1,70 +1,71 @@
 {
-  "generated_utc": "2026-11-06T19:18:02.015641+00:00",
-  "purpose": "Readability refresh of Figures 1\u20133; no simulation or numerical-analysis changes.",
+  "generated_utc": "2026-11-06T19:27:45.434253+00:00",
+  "purpose": "Readability refresh of Figures 1\u20133 with taller panels and beta notation for either estimand; no simulation or numerical-analysis changes.",
   "original_generation_manifest": "current_displays.json",
   "input_files_verified_against_original_md5": 211,
   "base_font_pt": 18,
   "figure_1_2_panel_inches": [
     10,
-    4.1
+    5.2
   ],
   "figure_3_inches": [
     8,
-    7.2
+    8
   ],
-  "manuscript_layout": "Figures 1\u20132: full-width vertically stacked subfigures; Figure 3: full-width vector PDF.",
+  "manuscript_layout": "Figures 1\u20132: full-width vertically stacked subfigures; Figure 3: full-width vector PDF. Single-spaced captions, subcaptions, and alt text within Figures 1\u20133.",
   "validation": "All three plotting scripts completed successfully using their existing inference and design validators.",
   "outputs": [
     {
       "path": "figures/fig1a.pdf",
-      "sha256": "4adcaa66b87b8284272386dd21a2d726de7f53ef224f99bbb97222d246e2c1fa"
+      "sha256": "87ffab744e462824b8822f07f3c59464df1f100d4bebc5fe1485424320a794f8"
     },
     {
       "path": "figures/fig1b.pdf",
-      "sha256": "aeb8520f9b13b65c37cc3a3a37bac226cc7de70bb93ee65ae503578de77ce60f"
+      "sha256": "1907bba69eb3ab34b28b657c57a01224b2a2cbcb0b9b7b5ec9aa735a1350e50e"
     },
     {
       "path": "figures/fig2a.pdf",
-      "sha256": "397a6799b8508a21c2c033745a9fbb22fa7672790a24acc513f911679e5aea25"
+      "sha256": "d5a8740b771215d7698ef017950deb2b6e2df86ed4a5a2505d2bb3d581d29e57"
     },
     {
       "path": "figures/fig2b.pdf",
-      "sha256": "db80dd519cafc4f3719fa46b796b9d84f3375755c5e997bbb2a4785938b84c8e"
+      "sha256": "d831d7352b5366a9165bc6eb63a7ddb4393f86a84bd9b9789852c695e804c885"
     },
     {
       "path": "figures/fig3.pdf",
-      "sha256": "52af6a2bfe2d7b2b77cd58d49aeecf44ad63871bda1f4b7c8ba4d116826a26ef"
+      "sha256": "e6d3cff926061a0d46f8ee1b028d97cbb77d9513bd3d73e1bc115d6f6659d263"
     },
     {
       "path": "figures/fig3.png",
-      "sha256": "e098c5771db3d4f08d6ac21db2ec632801e48909e3f3af4bcc22ee34e8c93805"
+      "sha256": "838ac2c5d7f9f5717df6b4e0bbaea50e54787e88c5c291f018d5eaed8d4f7a02"
     }
   ],
   "source_files": [
     {
       "path": "scripts/figures/plot_figure_1.R",
-      "sha256": "d8c4e1e5ffcb93df8aa751760822f2ea764b7e60c17922e7a21fbc872b070487"
+      "sha256": "8b2f9f7fbbcca8dbe17d58f8b63dc5979a2ba45e3927fead56d188945eca7000"
     },
     {
       "path": "scripts/figures/plot_figure_2.R",
-      "sha256": "9e361ab44b598e7b63816424dc93ad1fa4a05b1b23964e0bcf9b9817875e9718"
+      "sha256": "75203aa498c3ea3eb95578b1c4c0df70f143f106e3aa5703a6113b419fe2a715"
     },
     {
       "path": "scripts/figures/plot_figure_3.R",
-      "sha256": "158fa16f849fa0a360d1b6f34f36c83a3fbc0aed31617a028e6d3153ac8939ab"
+      "sha256": "9bb19fe8074ff930f0d88835b5492eb933f9bedbde1003dfc3b60ab6fb9e5eb1"
     },
     {
       "path": "scripts/utils/bias_plot_helpers.R",
-      "sha256": "96ba8f8d0115de1ddbc3d023627d8506b38b77b33a3ed159d4ac0618e4b02a4e"
+      "sha256": "a2bd40e992cf87078530cba72e764daa11efbfcee58428b01246d6ff2949f1a2"
     },
     {
       "path": "scripts/utils/coverage_plot_helpers.R",
-      "sha256": "239371a54a0fe0b18da1e0d317144bfa52b5145f90c13e822af109d766e0a1fc"
+      "sha256": "33bb77bd03197946a684d0009781b6e1928ecb4526295e7e4a4b6e8c5080b970"
     },
     {
       "path": "scripts/reproduce_displays.R",
       "sha256": "451d53c03d8aadfc82330f04e476e72b43db6cf1ea232f8a420e95ec1db3ea0b"
     }
   ],
-  "figure_1_2_y_axis_breaks": 3
+  "figure_1_2_y_axis_breaks": 3,
+  "coefficient_notation": "beta for both MCF and AUMCF, identified by panel headings"
 }

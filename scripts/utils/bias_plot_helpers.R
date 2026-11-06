@@ -1,16 +1,11 @@
 # Shared plotting functions; no command-line execution or output side effects.
-#' Convert a beta name to a parsed facet label (MCF: beta, AUMCF: gamma).
+#' Convert a beta name to a parsed facet label for either estimand.
 #'
 #' @param beta_name Character scalar (beta_A, beta_X, or beta_AX from the DGP).
-#' @param type Pseudo-value type: \code{AUC} (AUMCF) uses gamma, \code{MCF} uses beta.
+#' @param type Pseudo-value type, retained for compatibility; both use beta.
 #' @return Character scalar.
 BetaNameLabel <- function(beta_name, type) {
-  use_gamma <- toupper(type) == "AUC"
-  prefix <- if (use_gamma) {
-    "gamma"
-  } else {
-    "beta"
-  }
+  prefix <- "beta"
   if (beta_name == "beta_A") {
     out <- paste0(prefix, "[A]")
   } else if (beta_name == "beta_X") {
@@ -191,8 +186,7 @@ AddPlotLabels <- function(data) {
           USE.NAMES = FALSE
         ),
         levels = c(
-          "beta[A]", "beta[Z]", "beta[AZ]",
-          "gamma[A]", "gamma[Z]", "gamma[AZ]"
+          "beta[A]", "beta[Z]", "beta[AZ]"
         )
       ),
       beta_value_label = factor(
