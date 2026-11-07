@@ -27,6 +27,10 @@ PlotTerminalFigure <- function(type, number) {
   p_bias <- bias$BuildBiasPlot(b, base_size = MainFigureBaseSize(10), n_breaks = 3) +
     scale_y_continuous(name = "Bias", breaks = c(-bias_bound, 0, bias_bound)) +
     coord_cartesian(ylim = c(-bias_bound, bias_bound))
-  p <- gridExtra::arrangeGrob(p_bias, coverage$BuildCoveragePlot(c, base_size = MainFigureBaseSize(10), n_breaks = 3), ncol=1)
-  SaveRegressionFigure(p, file.path(opts$out_dir, paste0("fig",number,".pdf")),10,10.4)
+  p_coverage <- coverage$BuildCoveragePlot(c, base_size = MainFigureBaseSize(10), n_breaks = 3)
+  SaveRegressionFigure(p_bias, file.path(opts$out_dir, paste0("fig",number,"a.pdf")),10,8)
+  SaveRegressionFigure(p_coverage, file.path(opts$out_dir, paste0("fig",number,"b.pdf")),10,8)
+  # Retain the combined export for readers who prefer a single source figure.
+  p <- gridExtra::arrangeGrob(p_bias, p_coverage, ncol=1)
+  SaveRegressionFigure(p, file.path(opts$out_dir, paste0("fig",number,".pdf")),10,16)
 }

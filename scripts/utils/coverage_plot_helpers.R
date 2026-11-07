@@ -227,12 +227,13 @@ AddPlotLabels <- function(data) {
 #'
 #' @param data Plotting data for one type.
 #' @param base_size Base font size in points.
-#' @param n_breaks Approximate number of vertical-axis tick marks.
+#' @param n_breaks Retained for compatibility; coverage ticks are fixed at 5 percentage points.
 #' @return ggplot object.
 BuildCoveragePlot <- function(data, base_size = 11, n_breaks = 5) {
   gg_theme <- theme_bw(base_size = base_size) +
     theme(
       legend.position = "top",
+      panel.spacing.y = grid::unit(1, "lines"),
       panel.grid.major = element_blank(),
       panel.grid.minor = element_blank(),
       panel.border = element_blank(),
@@ -284,9 +285,11 @@ BuildCoveragePlot <- function(data, base_size = 11, n_breaks = 5) {
     scale_x_discrete(name = "Rate Parameter") +
     scale_y_continuous(
       name = "Coverage",
-      limits = c(0, 1),
-      n.breaks = n_breaks
-    )
+      breaks = seq(0.80, 1.00, by = 0.05),
+      labels = function(x) paste0(round(100 * x), "%"),
+      expand = expansion(mult = 0)
+    ) +
+    coord_cartesian(ylim = c(0.80, 1.00))
 
   return(out)
 }

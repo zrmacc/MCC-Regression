@@ -1,0 +1,211 @@
+{
+  "generated_utc": "2026-11-07T06:33:48.802830+00:00",
+  "purpose": "Zoom coverage axes and enlarge bias, coverage, and power panels without rerunning simulations.",
+  "coverage_ylim": [
+    0.8,
+    1.0
+  ],
+  "coverage_breaks": [
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    1.0
+  ],
+  "coverage_tick_labels": [
+    "80%",
+    "85%",
+    "90%",
+    "95%",
+    "100%"
+  ],
+  "bias_coverage_panel_inches": [
+    10,
+    8
+  ],
+  "power_inches": [
+    9,
+    7
+  ],
+  "terminal_combined_inches": [
+    10,
+    16
+  ],
+  "main_typography_unchanged": true,
+  "printed_font_pt_at_6p5_inches": 11.7,
+  "layout": "Full-width bias/coverage panels on continued figure pages; figure numbers retained.",
+  "simulation_input_files_verified": 615,
+  "plot_data_validation": [
+    {
+      "plot": "baseline bias MCF",
+      "layer_data_identical": "TRUE",
+      "layers": "2",
+      "coverage_zoom_verified": "FALSE"
+    },
+    {
+      "plot": "baseline coverage MCF",
+      "layer_data_identical": "TRUE",
+      "layers": "3",
+      "coverage_zoom_verified": "TRUE"
+    },
+    {
+      "plot": "baseline bias AUC",
+      "layer_data_identical": "TRUE",
+      "layers": "2",
+      "coverage_zoom_verified": "FALSE"
+    },
+    {
+      "plot": "baseline coverage AUC",
+      "layer_data_identical": "TRUE",
+      "layers": "3",
+      "coverage_zoom_verified": "TRUE"
+    },
+    {
+      "plot": "frailty bias",
+      "layer_data_identical": "TRUE",
+      "layers": "2",
+      "coverage_zoom_verified": "FALSE"
+    },
+    {
+      "plot": "frailty coverage",
+      "layer_data_identical": "TRUE",
+      "layers": "3",
+      "coverage_zoom_verified": "TRUE"
+    },
+    {
+      "plot": "terminal coverage MCF",
+      "layer_data_identical": "TRUE",
+      "layers": "3",
+      "coverage_zoom_verified": "TRUE"
+    },
+    {
+      "plot": "terminal coverage AUC",
+      "layer_data_identical": "TRUE",
+      "layers": "3",
+      "coverage_zoom_verified": "TRUE"
+    }
+  ],
+  "body_text_and_proof_unchanged": true,
+  "build_checks": {
+    "main": {
+      "new_warnings": [],
+      "preexisting_body_warnings": [
+        "Overfull \\hbox (15.61577pt too wide) in paragraph at lines 112--113",
+        "Overfull \\hbox (15.91847pt too wide) in paragraph at lines 188--190",
+        "Overfull \\hbox (0.6872pt too wide) in paragraph at lines 358--358"
+      ],
+      "rendered_figure_pages": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    "supplement": {
+      "new_warnings": [],
+      "preexisting_body_warnings": [],
+      "rendered_figure_pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "source_files": [
+    {
+      "path": "scripts/figures/plot_figure_1.R",
+      "sha256": "246b6fb2752722cfea8b8cc18315068a6698a46a9aff261d97cad7f3566ba761"
+    },
+    {
+      "path": "scripts/figures/plot_figure_2.R",
+      "sha256": "3e97277ce6775f2a71c2a8864037ea199d31a626d0a019b0f32f7b7d8dd42004"
+    },
+    {
+      "path": "scripts/figures/plot_figure_4.R",
+      "sha256": "d366ef082bef2e262acf06e6b898ddf05f230999a4969de3a1f8b7ec6b5e8e21"
+    },
+    {
+      "path": "scripts/figures/plot_figure_S2.R",
+      "sha256": "58518f8587bea2984dd3e8dd0d78664c638442e30da827efef06392d6937f531"
+    },
+    {
+      "path": "scripts/utils/coverage_plot_helpers.R",
+      "sha256": "3c9566a735c6cf24019004d3f5579892b79d9989fd9fd404581da8bc44be589c"
+    },
+    {
+      "path": "scripts/utils/display_assets.R",
+      "sha256": "d4ae7486cdbccf9267eb1cd4cde2c6bc5eff992db84aee7a5f6b94b1752819ad"
+    },
+    {
+      "path": "scripts/utils/terminal_plot_helpers.R",
+      "sha256": "a0e8f1b717eff6004a4bc85dd113f6d6aca4ae7fced8d71836fe3c7307145ec0"
+    },
+    {
+      "path": "scripts/validation/validate_display_assets.R",
+      "sha256": "1dbd015971a641aca0235ac2cb44bf17c2ce448c36964ae28723f813ad1a20d4"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "figures/fig1a.pdf",
+      "sha256": "7718cdeec3ee305024a5052806c61a0a1b7a06ecdf7dda9d69f4d952287773b6"
+    },
+    {
+      "path": "figures/fig1b.pdf",
+      "sha256": "c2fcedf860bd68e183b6ba939ff5ec4e73a8f88a9bfd3aa498e99e89d4f13d46"
+    },
+    {
+      "path": "figures/fig2a.pdf",
+      "sha256": "2b95e6198a76d460233be4169177ff6aa7188a0c5f64bbefffe2091fb5010f28"
+    },
+    {
+      "path": "figures/fig2b.pdf",
+      "sha256": "0a95bd506d87ad89e5ce8bdec5ada411e2eb6d4119e19c6f2911acc2930ca683"
+    },
+    {
+      "path": "figures/fig3.pdf",
+      "sha256": "880a3ed624906084f169c715cb8b3002a7af5c46f2c05c9563101b91b3fa6651"
+    },
+    {
+      "path": "figures/fig4.pdf",
+      "sha256": "b606e281c74967d8d50527e031117619a3cc781164dd983aa5e2373ed1cfc4af"
+    },
+    {
+      "path": "figures/figS2a.pdf",
+      "sha256": "e48b779bf094962a6ea4f5577e4f3d0be5b02b9facada7adf57e403c3acd2dad"
+    },
+    {
+      "path": "figures/figS2b.pdf",
+      "sha256": "2718e4ecf13db0ab622ba428e4366eaa6f62383bec915ca001cbe08d27b7ad10"
+    },
+    {
+      "path": "figures/figS3.pdf",
+      "sha256": "24b9b85170932f823abcf2a15786c85b61110037e8fbc730a6d83f6edb619d7d"
+    },
+    {
+      "path": "figures/figS3a.pdf",
+      "sha256": "0b07d2bd8eab6318a0c3c632c5596aa2c9ea02537b9c74a2465e5089fca30d03"
+    },
+    {
+      "path": "figures/figS3b.pdf",
+      "sha256": "3044bd6e1bdd80c1ab3de0f36e6e08e0b6d9f461d7b0c5bc0c1f126826f7b3e7"
+    },
+    {
+      "path": "figures/figS4.pdf",
+      "sha256": "8d2e4de3fa8785f21db72ae43d6f880f26b511068191cf9ca82579b810790056"
+    },
+    {
+      "path": "figures/figS4a.pdf",
+      "sha256": "639709e1d447938eae5ff0f331233f765d96e50c064aa5ef590a230ee0801969"
+    },
+    {
+      "path": "figures/figS4b.pdf",
+      "sha256": "d24104447421481933290ba3a4e7fba1131381dbf0881e8a6a0b8630035ba5dc"
+    }
+  ]
+}
