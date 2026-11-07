@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-# Figure S4: terminal-event bias and coverage, AUC.
+# Web Figure 3: terminal-event bias and coverage, AUMCF.
 argv <- commandArgs(trailingOnly = FALSE)
 script <- sub("^--file=", "", argv[grepl("^--file=", argv)][1L])
 source(file.path(dirname(dirname(normalizePath(script))), "utils", "bootstrap_regression.R"))

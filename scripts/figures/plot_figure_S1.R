@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-# Figure S1: exact-jackknife versus empirical-influence-function pseudo-values.
+# Historical concordance display; not included in the current manuscript or supplement.
 
 argv <- commandArgs(trailingOnly = FALSE)
 script <- sub("^--file=", "", argv[grepl("^--file=", argv)][1L])

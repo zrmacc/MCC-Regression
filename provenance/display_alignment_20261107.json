@@ -1,0 +1,385 @@
+{
+  "generated_utc": "2026-11-07 04:26:06 UTC",
+  "purpose": "Align replication with the active main-text and supplemental figures; reuse saved simulations.",
+  "original_input_manifest": "current_displays.json",
+  "saved_input_files_verified": 615,
+  "generation_jobs": [
+    {
+      "script": "figures/plot_figure_1.R",
+      "status": 0
+    },
+    {
+      "script": "figures/plot_figure_2.R",
+      "status": 0
+    },
+    {
+      "script": "figures/plot_figure_3.R",
+      "status": 0
+    },
+    {
+      "script": "figures/plot_figure_4.R",
+      "status": 0
+    },
+    {
+      "script": "figures/plot_figure_S2.R",
+      "status": 0
+    },
+    {
+      "script": "figures/plot_figure_S3.R",
+      "status": 0
+    },
+    {
+      "script": "figures/plot_figure_S4.R",
+      "status": 0
+    },
+    {
+      "script": "tables/make_table_1.R",
+      "status": 0
+    },
+    {
+      "script": "tables/make_table_S1.R",
+      "status": 0
+    }
+  ],
+  "figure_assets": [
+    {
+      "document": "main",
+      "figure": 1,
+      "label": "fig:bias",
+      "script": "plot_figure_1.R",
+      "source": "fig1a.pdf",
+      "manuscript": "fig2a.pdf"
+    },
+    {
+      "document": "main",
+      "figure": 1,
+      "label": "fig:bias",
+      "script": "plot_figure_1.R",
+      "source": "fig1b.pdf",
+      "manuscript": "fig2b.pdf"
+    },
+    {
+      "document": "main",
+      "figure": 2,
+      "label": "fig:coverage",
+      "script": "plot_figure_2.R",
+      "source": "fig2a.pdf",
+      "manuscript": "fig3a.pdf"
+    },
+    {
+      "document": "main",
+      "figure": 2,
+      "label": "fig:coverage",
+      "script": "plot_figure_2.R",
+      "source": "fig2b.pdf",
+      "manuscript": "fig3b.pdf"
+    },
+    {
+      "document": "main",
+      "figure": 3,
+      "label": "fig:t1e",
+      "script": "plot_figure_3.R",
+      "source": "fig3.pdf",
+      "manuscript": "fig5.pdf"
+    },
+    {
+      "document": "main",
+      "figure": 4,
+      "label": "fig:power",
+      "script": "plot_figure_4.R",
+      "source": "fig4.pdf",
+      "manuscript": "fig6.pdf"
+    },
+    {
+      "document": "main",
+      "figure": 5,
+      "label": "fig:application",
+      "manuscript": "fig7.pdf"
+    },
+    {
+      "document": "supplement",
+      "figure": 1,
+      "label": "supp:fig:frailty",
+      "script": "plot_figure_S2.R",
+      "source": "figS2a.pdf",
+      "manuscript": "fig4a.pdf"
+    },
+    {
+      "document": "supplement",
+      "figure": 1,
+      "label": "supp:fig:frailty",
+      "script": "plot_figure_S2.R",
+      "source": "figS2b.pdf",
+      "manuscript": "fig4b.pdf"
+    },
+    {
+      "document": "supplement",
+      "figure": 2,
+      "label": "supp:fig:terminal-event-beta",
+      "script": "plot_figure_S3.R",
+      "source": "figS3.pdf",
+      "manuscript": "supp_fig_terminal_event_beta.pdf"
+    },
+    {
+      "document": "supplement",
+      "figure": 3,
+      "label": "supp:fig:terminal-event-gamma",
+      "script": "plot_figure_S4.R",
+      "source": "figS4.pdf",
+      "manuscript": "supp_fig_terminal_event_gamma.pdf"
+    }
+  ],
+  "pdf_checks": [
+    {
+      "file": "fig1a.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    },
+    {
+      "file": "fig1b.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    },
+    {
+      "file": "fig2a.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    },
+    {
+      "file": "fig2b.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    },
+    {
+      "file": "fig3.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    },
+    {
+      "file": "fig4.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    },
+    {
+      "file": "figS2a.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    },
+    {
+      "file": "figS2b.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    },
+    {
+      "file": "figS3.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    },
+    {
+      "file": "figS4.pdf",
+      "pdf_content_identical": true,
+      "fonts_identical": true,
+      "dimensions_identical": true
+    }
+  ],
+  "tables_byte_identical": true,
+  "manuscript_assets_validated": true,
+  "validation_guards": "Incorrect asset names, figure labels, and mismatched asset copies rejected; preflight permits missing generated copies before synchronization.",
+  "supplied_outputs": [
+    {
+      "path": "figures/fig1a.pdf",
+      "md5": "d2baefb8f6503354b542730b5299a941"
+    },
+    {
+      "path": "figures/fig1b.pdf",
+      "md5": "7cc10ce580a68d4af019dac90d26b7cd"
+    },
+    {
+      "path": "figures/fig2a.pdf",
+      "md5": "5a5485957510b1976f5502d13c1d8cbd"
+    },
+    {
+      "path": "figures/fig2b.pdf",
+      "md5": "a552886e0544a1fc3c30a40374051707"
+    },
+    {
+      "path": "figures/fig3.pdf",
+      "md5": "a931a5a880e65ab4536c614f053077c4"
+    },
+    {
+      "path": "figures/fig4.pdf",
+      "md5": "6c259e653255ca8cd39f487338fd9fd3"
+    },
+    {
+      "path": "figures/figS2a.pdf",
+      "md5": "05b8aff4be364fd633b110a18474bd60"
+    },
+    {
+      "path": "figures/figS2b.pdf",
+      "md5": "0330185deced2631798c5b0583fed66c"
+    },
+    {
+      "path": "figures/figS3.pdf",
+      "md5": "2d7882357f60e00417baa923be032544"
+    },
+    {
+      "path": "figures/figS4.pdf",
+      "md5": "faa22eba019ad4c9b9f9eda2f6cb62b6"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "scripts/figures/plot_figure_1.R",
+      "md5": "09792212e49e7ea330ee86f482b0c5f6"
+    },
+    {
+      "path": "scripts/figures/plot_figure_2.R",
+      "md5": "3d23e23a2b6c728492ee8e6713322021"
+    },
+    {
+      "path": "scripts/figures/plot_figure_3.R",
+      "md5": "2d17410376610d34bf3249308f5659bd"
+    },
+    {
+      "path": "scripts/figures/plot_figure_4.R",
+      "md5": "ccb77cc9c8273391e86995905e4d8e08"
+    },
+    {
+      "path": "scripts/figures/plot_figure_S1.R",
+      "md5": "efd3137ade8a553fe15a311a2519e7a8"
+    },
+    {
+      "path": "scripts/figures/plot_figure_S2.R",
+      "md5": "97021ffcef62790734c35115deb52c58"
+    },
+    {
+      "path": "scripts/figures/plot_figure_S3.R",
+      "md5": "7a248de5cd01574270faf20a01341a05"
+    },
+    {
+      "path": "scripts/figures/plot_figure_S4.R",
+      "md5": "bb65b2fe7d27a52dbde078cbf3fe3394"
+    },
+    {
+      "path": "scripts/reproduce_displays.R",
+      "md5": "04b31ee24dcaf0e7b9f281636b7e71fb"
+    },
+    {
+      "path": "scripts/sims/sim_estimation_truth.R",
+      "md5": "a46bf619796429834625cbff8dbd9c24"
+    },
+    {
+      "path": "scripts/sims/sim_estimation.R",
+      "md5": "966747f1a9296e8356cc55590c37a02e"
+    },
+    {
+      "path": "scripts/sims/sim_frailty_truth.R",
+      "md5": "25e5184fdaba88b0757d86ca2c52bb9c"
+    },
+    {
+      "path": "scripts/sims/sim_frailty.R",
+      "md5": "177456d8149fc832e39fc1dae095fc4a"
+    },
+    {
+      "path": "scripts/sims/sim_power.R",
+      "md5": "20b16d1ec43e8049a592cc1f7433869a"
+    },
+    {
+      "path": "scripts/sims/sim_pseudovalue.R",
+      "md5": "69024e0e7f3fc8e1a922dcaaa180ce6c"
+    },
+    {
+      "path": "scripts/sims/sim_terminal_event_truth.R",
+      "md5": "a99040a532853e566834d96549c8c039"
+    },
+    {
+      "path": "scripts/sims/sim_terminal_event.R",
+      "md5": "20db1bf6f0ad9f743da7b6ba37393772"
+    },
+    {
+      "path": "scripts/sims/sim_type1.R",
+      "md5": "63804eff5b2bc0cdd2715ffa55a66ca8"
+    },
+    {
+      "path": "scripts/tables/make_table_1.R",
+      "md5": "0b3912a1ac9440bf365a089557f9e53a"
+    },
+    {
+      "path": "scripts/tables/make_table_S1.R",
+      "md5": "487bd2eccb7fdb1ee073570a66d84e30"
+    },
+    {
+      "path": "scripts/utils/bias_plot_helpers.R",
+      "md5": "2f9277cf4a1502730bcbce553c494277"
+    },
+    {
+      "path": "scripts/utils/bootstrap_regression.R",
+      "md5": "2b63c83802c76065d69d2a82d9c1985d"
+    },
+    {
+      "path": "scripts/utils/corrected_inference.R",
+      "md5": "6dcf66131ea4ee3c7b7da5034fbd3bb3"
+    },
+    {
+      "path": "scripts/utils/coverage_plot_helpers.R",
+      "md5": "b2afe95cdb3cb9888239b992c781c7b5"
+    },
+    {
+      "path": "scripts/utils/display_assets.R",
+      "md5": "9f7d966abb68fc34b57f31a65abaa017"
+    },
+    {
+      "path": "scripts/utils/ground_truth_io.R",
+      "md5": "a3b13afc5bb5db8944c4f1843b16bf24"
+    },
+    {
+      "path": "scripts/utils/regression_dgp.R",
+      "md5": "787e3053d1d72d4fee4651c418f080e5"
+    },
+    {
+      "path": "scripts/utils/regression_options.R",
+      "md5": "bdf433b918ea2f112353c6eee8afe9cb"
+    },
+    {
+      "path": "scripts/utils/regression_paths.R",
+      "md5": "d9821f61c58f326daa6d236e751535ca"
+    },
+    {
+      "path": "scripts/utils/se_calibration.R",
+      "md5": "ddbdecef6875b77692a66c876473c76e"
+    },
+    {
+      "path": "scripts/utils/t1e_sim.R",
+      "md5": "5acdb5be5284aa2997222d146bdbd2ec"
+    },
+    {
+      "path": "scripts/utils/terminal_event_sim.R",
+      "md5": "f3476e8803f0fa937801e8d0db14ae0e"
+    },
+    {
+      "path": "scripts/utils/terminal_plot_helpers.R",
+      "md5": "cfc3661d48391e01d95dff149b76e4d5"
+    },
+    {
+      "path": "scripts/validation/smoke_corrected_simulations.R",
+      "md5": "d197c5fa7a96ce8d03c02f2fd1d14047"
+    },
+    {
+      "path": "scripts/validation/validate_corrected_inference.R",
+      "md5": "4625f57780b3c00cb58b6e8e243ab67e"
+    },
+    {
+      "path": "scripts/validation/validate_display_assets.R",
+      "md5": "5c429c1f51c7598397e4f4313a626de1"
+    }
+  ]
+}

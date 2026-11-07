@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-# Figure S2: shared-frailty bias (a) and corrected coverage (b).
+# Web Figure 1: shared-frailty bias (a) and corrected coverage (b).
 
 argv <- commandArgs(trailingOnly = FALSE)
 script <- sub("^--file=", "", argv[grepl("^--file=", argv)][1L])
@@ -123,7 +123,7 @@ PrepareFrailtyPlotData <- function(data, gt_long) {
     dplyr::mutate(
       coverage_lower = ci$lower,
       coverage_upper = ci$upper,
-      type_label = dplyr::recode(type, AUC = "AUMCF", MCF = "MCF"),
+      type_label = factor(dplyr::recode(type, AUC = "AUMCF", MCF = "MCF"), levels = c("MCF", "AUMCF")),
       tau_label = factor(paste0("tau == ", tau), levels = tau_levels),
       N = factor(n, levels = n_levels),
       frailty_f = factor(frailty_variance, levels = frailty_levels)
@@ -132,7 +132,7 @@ PrepareFrailtyPlotData <- function(data, gt_long) {
   out_bias <- joined %>%
     dplyr::filter(is.finite(bias)) %>%
     dplyr::mutate(
-      type_label = dplyr::recode(type, AUC = "AUMCF", MCF = "MCF"),
+      type_label = factor(dplyr::recode(type, AUC = "AUMCF", MCF = "MCF"), levels = c("MCF", "AUMCF")),
       tau_label = factor(paste0("tau == ", tau), levels = tau_levels),
       N = factor(n, levels = n_levels),
       frailty_f = factor(frailty_variance, levels = frailty_levels)
@@ -142,10 +142,11 @@ PrepareFrailtyPlotData <- function(data, gt_long) {
   return(out)
 }
 
+# Match the main figures: 18-point base type on a 10-inch source canvas.
 BuildCoveragePlot <- function(data) {
-  dodge_width <- 0.9
+  dodge_width <- 0.8
   ggplot(data, aes(x = frailty_f, y = coverage, fill = N, group = N)) +
-    theme_bw() +
+    theme_bw(base_size = MainFigureBaseSize(10)) +
     theme(
       legend.position = "top",
       panel.grid.major = element_blank(),
@@ -157,15 +158,15 @@ BuildCoveragePlot <- function(data) {
     geom_hline(
       yintercept = 0.95,
       linetype = "dashed",
-      linewidth = 0.35,
-      color = "gray35"
+      linewidth = 0.3,
+      color = "grey50"
     ) +
-    geom_col(position = position_dodge(width = dodge_width), width = 0.82) +
+    geom_col(position = position_dodge(width = dodge_width), width = 0.7, alpha = 0.8) +
     geom_errorbar(
       aes(ymin = coverage_lower, ymax = coverage_upper),
       position = position_dodge(width = dodge_width),
-      width = 0.22,
-      linewidth = 0.35
+      width = 0.2,
+      linewidth = 0.3
     ) +
     facet_grid(
       rows = vars(type_label),
@@ -173,13 +174,13 @@ BuildCoveragePlot <- function(data) {
       labeller = labeller(tau_label = label_parsed)
     ) +
     scale_fill_brewer(name = "N per Arm", palette = "Blues") +
-    scale_y_continuous(limits = c(0, 1)) +
+    scale_y_continuous(limits = c(0, 1), n.breaks = 3) +
     labs(x = "Frailty Variance", y = "Coverage")
 }
 
 BuildBiasPlot <- function(data) {
   ggplot(data, aes(x = frailty_f, y = bias, fill = N)) +
-    theme_bw() +
+    theme_bw(base_size = MainFigureBaseSize(10)) +
     theme(
       legend.position = "top",
       panel.grid.major = element_blank(),
@@ -188,13 +189,11 @@ BuildBiasPlot <- function(data) {
       strip.background = element_blank(),
       axis.line = element_line(color = "black")
     ) +
-    geom_hline(yintercept = 0, linetype = "dashed", linewidth = 0.3, color = "gray50") +
+    geom_hline(yintercept = 0, linetype = "dashed", linewidth = 0.2) +
     geom_boxplot(
-      position = position_dodge2(width = 0.85, preserve = "single"),
-      width = 0.78,
-      linewidth = 0.35,
-      outlier.size = 0.45,
-      alpha = 0.92
+      linewidth = 0.3,
+      outlier.size = 0.5,
+      alpha = 0.6
     ) +
     facet_grid(
       rows = vars(type_label),
@@ -202,6 +201,8 @@ BuildBiasPlot <- function(data) {
       labeller = labeller(tau_label = label_parsed)
     ) +
     scale_fill_brewer(name = "N per Arm", palette = "Blues") +
+    scale_y_continuous(n.breaks = 3) +
+    coord_cartesian(ylim = c(-max(abs(data$bias)), max(abs(data$bias)))) +
     labs(x = "Frailty Variance", y = "Bias")
 }
 
@@ -241,12 +242,12 @@ SaveRegressionFigure(
   plot = p_cov,
   path_pdf = file.path(out_dir, "figS2b.pdf"),
   width = 10,
-  height = 6
+  height = 4
 )
 SaveRegressionFigure(
   plot = p_bias,
   path_pdf = file.path(out_dir, "figS2a.pdf"),
   width = 10,
-  height = 6
+  height = 4
 )
 message("Wrote frailty plots to ", out_dir)

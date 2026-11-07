@@ -22,6 +22,11 @@ PlotTerminalFigure <- function(type, number) {
   # Supply a null graphics device for layout calculations, avoiding Rplots.pdf.
   grDevices::pdf(file=NULL)
   on.exit(grDevices::dev.off(), add=TRUE)
-  p <- gridExtra::arrangeGrob(bias$BuildBiasPlot(b), coverage$BuildCoveragePlot(c), ncol=1)
-  SaveRegressionFigure(p, file.path(opts$out_dir, paste0("fig",number,".pdf")),10,18)
+  # Match main-figure typography and panel heights; retain every observation.
+  bias_bound <- max(abs(pretty(c(-max(abs(b$bias)), max(abs(b$bias))), n = 2)))
+  p_bias <- bias$BuildBiasPlot(b, base_size = MainFigureBaseSize(10), n_breaks = 3) +
+    scale_y_continuous(name = "Bias", breaks = c(-bias_bound, 0, bias_bound)) +
+    coord_cartesian(ylim = c(-bias_bound, bias_bound))
+  p <- gridExtra::arrangeGrob(p_bias, coverage$BuildCoveragePlot(c, base_size = MainFigureBaseSize(10), n_breaks = 3), ncol=1)
+  SaveRegressionFigure(p, file.path(opts$out_dir, paste0("fig",number,".pdf")),10,10.4)
 }

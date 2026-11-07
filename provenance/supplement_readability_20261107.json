@@ -1,0 +1,45 @@
+{
+  "purpose": "Match supplemental plot styling to main figures; no simulations rerun",
+  "base_font_pt": 18,
+  "source_width_inches": 10,
+  "printed_base_font_pt_at_6p5in": 11.7,
+  "frailty_panel_inches": [
+    10,
+    4
+  ],
+  "terminal_figure_inches": [
+    10,
+    10.4
+  ],
+  "validated_input_files": 236,
+  "validation": " plot observations, coverage estimates/intervals, box statistics and outliers unchanged.\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\nMCF : terminal-event layer data/statistics unchanged; bias limits -4 4 \nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\nAUC : terminal-event layer data/statistics unchanged; bias limits -10 10 \nSource fonts: 18 pt at 10 inches, yielding 11.7 pt at 6.5 inches.\n",
+  "outputs": [
+    {
+      "file": "fig4a.pdf",
+      "sha256": "6be76eb0c1f29e3254c73be2089a4b69d3427b42142194e9e823b29967a36532"
+    },
+    {
+      "file": "fig4b.pdf",
+      "sha256": "3f4a010aec070bcf7c4e5cd6915a159f2093db0ee2fc9f6a187113035fa4a5c2"
+    },
+    {
+      "file": "supp_fig_terminal_event_beta.pdf",
+      "sha256": "3123388e0f40ddcdfce47e63afb13a34105b395d8497be8006a9fd1aa7894efb"
+    },
+    {
+      "file": "supp_fig_terminal_event_gamma.pdf",
+      "sha256": "8d07ab08c662c3abec2bdd0988ae27f64511fb123524ead6e4158ed306ba4e7f"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "scripts/figures/plot_figure_S2.R",
+      "sha256": "97a0339b5f12df1864e7866047679263294f71dad73af0663e4a697e7e8e4559"
+    },
+    {
+      "path": "scripts/utils/terminal_plot_helpers.R",
+      "sha256": "28ee47cce3eaa1a2c236c600edeccd2926b17b1c5b8dba25e1c813fbef94a999"
+    }
+  ],
+  "layout": "Full-width stacked frailty panels; full-width terminal-event figures; single-spaced captions and alt text. Dedicated figure pages prevent gaps caused by forced in-text placement."
+}
