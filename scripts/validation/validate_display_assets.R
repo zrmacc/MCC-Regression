@@ -11,4 +11,4 @@ opts <- parse_args(OptionParser(option_list = list(
 )))
 if (is.null(opts$manuscript_dir)) stop("Supply --manuscript_dir with main.tex, supplement.tex, and figures/.", call. = FALSE)
 assets <- ValidateManuscriptFigures(ResolveRegressionPath(opts$manuscript_dir), ResolveRegressionPath(opts$figure_dir))
-message("PASS: 10 generated figure assets match the active main-text/supplement figures; the clinical figure is supplied separately.")
+message("PASS: ", sum(!is.na(assets$source)), " generated figure assets match the active main-text/supplement figures; the clinical figure is supplied separately.")

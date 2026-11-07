@@ -149,6 +149,7 @@ BuildCoveragePlot <- function(data) {
     theme_bw(base_size = MainFigureBaseSize(10)) +
     theme(
       legend.position = "top",
+      panel.spacing.y = grid::unit(1, "lines"),
       panel.grid.major = element_blank(),
       panel.grid.minor = element_blank(),
       panel.border = element_blank(),
@@ -174,7 +175,10 @@ BuildCoveragePlot <- function(data) {
       labeller = labeller(tau_label = label_parsed)
     ) +
     scale_fill_brewer(name = "N per Arm", palette = "Blues") +
-    scale_y_continuous(limits = c(0, 1), n.breaks = 3) +
+    scale_y_continuous(breaks = seq(0.80, 1.00, by = 0.05),
+                       labels = function(x) paste0(round(100 * x), "%"),
+                       expand = expansion(mult = 0)) +
+    coord_cartesian(ylim = c(0.80, 1.00)) +
     labs(x = "Frailty Variance", y = "Coverage")
 }
 
@@ -183,6 +187,7 @@ BuildBiasPlot <- function(data) {
     theme_bw(base_size = MainFigureBaseSize(10)) +
     theme(
       legend.position = "top",
+      panel.spacing.y = grid::unit(1, "lines"),
       panel.grid.major = element_blank(),
       panel.grid.minor = element_blank(),
       panel.border = element_blank(),
@@ -242,12 +247,12 @@ SaveRegressionFigure(
   plot = p_cov,
   path_pdf = file.path(out_dir, "figS2b.pdf"),
   width = 10,
-  height = 4
+  height = 8
 )
 SaveRegressionFigure(
   plot = p_bias,
   path_pdf = file.path(out_dir, "figS2a.pdf"),
   width = 10,
-  height = 4
+  height = 8
 )
 message("Wrote frailty plots to ", out_dir)

@@ -249,7 +249,7 @@ for (metric in metrics) {
     plot = p,
     path_pdf = out_file,
     width = 9,
-    height = 5
+    height = 7
   )
 }
 
